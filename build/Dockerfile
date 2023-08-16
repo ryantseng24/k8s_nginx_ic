@@ -17,7 +17,7 @@ RUN apt-get update \
 
 ############################################# Base image for Alpine #############################################
 # docker.io/library/nginx is a temporary workaround for Dependabot to see this as different from the one used in Debian
-FROM docker.io/library/nginx:1.21.6-alpine AS alpine
+FROM docker.io/library/nginx:1.25.2-alpine AS alpine
 
 RUN apk add --no-cache libcap \
 	# temp fix for CVE-2022-1271, CVE-2022-22576, CVE-2022-27404 and CVE-2022-29824
