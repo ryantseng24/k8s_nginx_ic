@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
       - run: npm install semver
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         continue-on-error: true
         with:
           script: |
