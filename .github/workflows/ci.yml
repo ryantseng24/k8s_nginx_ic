@@ -52,7 +52,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Cache Go controller tools
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cache/go-build
@@ -91,7 +91,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Cache Go build
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cache/go-build
@@ -114,7 +114,7 @@ jobs:
           AWS_PRODUCT_CODE: ${{ secrets.AWS_PRODUCT_CODE }}
           AWS_PUB_KEY: ${{ secrets.AWS_PUB_KEY }}
       - name: Store Artifacts in Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/dist
           key: nginx-ingress-${{ github.run_id }}-${{ github.run_number }}-single
@@ -127,7 +127,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Cache Go tests
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cache/go-build
@@ -212,7 +212,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Fetch Cached Artifacts
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/dist
           key: nginx-ingress-${{ github.run_id }}-${{ github.run_number }}-single
@@ -267,7 +267,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Cache Go build
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cache/go-build
@@ -334,7 +334,7 @@ jobs:
           AWS_PRODUCT_CODE: ${{ secrets.AWS_PRODUCT_CODE }}
           AWS_PUB_KEY: ${{ secrets.AWS_PUB_KEY }}
       - name: Store Artifacts in Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/dist
           key: nginx-ingress-${{ github.run_id }}-${{ github.run_number }}-multi
@@ -358,7 +358,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Fetch Cached Artifacts
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/dist
           key: nginx-ingress-${{ github.run_id }}-${{ github.run_number }}-multi
@@ -488,7 +488,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Fetch Cached Artifacts
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/dist
           key: nginx-ingress-${{ github.run_id }}-${{ github.run_number }}-multi
