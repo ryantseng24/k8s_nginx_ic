@@ -652,7 +652,7 @@ jobs:
       - name: Remove previous Chart
         run: rm -f ${{ github.workspace }}/${{ needs.package-helm.outputs.type }}/nginx-ingress-${{ needs.package-helm.outputs.version }}.tgz
       - name: Retrieve latest Helm Chart
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v5
         with:
           name: helm-chart
           path: ${{ github.workspace }}/${{ needs.package-helm.outputs.type }}
